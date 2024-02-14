@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3">
+    <h1>Login:</h1>
+
+    <form method="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+        <form>
+            <div class="mb-3">
+              <label for="InputEmail" class="form-label">Email:</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="InputPassword" class="form-label">Senha:</label>
+              <input type="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-secondary">Enviar</button>
+          </form>
+    </form>
+
+</div>    
+
+
+{% endblock %}
